@@ -9,9 +9,9 @@ export default function Page() {
         {/* Add padding to make space for the navbar */}
         <main className="w-full pt-36"> {/* Increased padding to pt-36 for more space */}
           <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl font-bold text-center">Welcome to nVission</h1>
+            {/* <h1 className="text-4xl font-bold text-center">Welcome to nVission</h1>
             <p className="text-center mt-4">Your one-stop solution for innovation.</p>
-            <p className="text-center mt-4">'</p>
+            <p className="text-center mt-4">'</p> */}
           </div>
         </main>
         <div className="flex flex-col items-center justify-center text-center min-h-screen px-4 mt-8">
