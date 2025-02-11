@@ -170,30 +170,46 @@ export default function Page() {
       </GlobalTeamContainer>
 
       <Container>
-        <Content>
-          <Titles >SERVICING CLIENTS</Titles>
-          <Subtitle>GLOBALLY</Subtitle>
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Descriptions>
-              We use a <span className="font-bold italic">platform-agnostic</span> approach to service every campaign.
-              This allows us to customize every project based on brand goals and needs.
-            </Descriptions>
-            <div className="col-span-2">
-              <ClientList>
-                {clients.map((client, index) => (
-                  <ClientItem key={index}>
-                    {client.name}
-                    <img alt={`Placeholder image for ${client.name}`} className="hover-image ml-2" height="50" src={client.imageUrl} width="50" />
-                  </ClientItem>
-                ))}
-              </ClientList>
-              {remainingClients > 0 && (
-                <MoreText onClick={addMoreClients}>+{remainingClients} More</MoreText>
-              )}
-            </div>
-          </div>
-        </Content>
-      </Container>
+  {/* Title Container - Above the columns */}
+  <TitleContainer>
+    <Titles>SERVICING CLIENTS</Titles>
+    <Subtitle>GLOBALLY</Subtitle>
+  </TitleContainer>
+
+  <Content>
+    {/* Left Column - Descriptions */}
+    <LeftColumn>
+      <Descriptions>
+        We use a <span className="font-bold italic">platform-agnostic</span> approach to service every campaign.
+        This allows us to customize every project based on brand goals and needs.
+      </Descriptions>
+    </LeftColumn>
+
+    {/* Right Column - Client List */}
+    <RightColumn>
+      <ClientList>
+        {clients.map((client, index) => (
+          <ClientItem key={index}>
+            {client.name}
+            <img
+              alt={`Placeholder image for ${client.name}`}
+              className="hover-image ml-2"
+              height="50"
+              src={client.imageUrl}
+              width="50"
+            />
+          </ClientItem>
+        ))}
+      </ClientList>
+      {remainingClients > 0 && (
+        <MoreText onClick={addMoreClients}>+{remainingClients} More</MoreText>
+      )}
+    </RightColumn>
+  </Content>
+</Container>
+
+
+
       <Footer />
 
     </>
@@ -442,18 +458,41 @@ const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
   padding: 1rem;
+  flex-direction: column; /* Stack title and content vertically */
+  position: relative;
 `;
 
 const Content = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left column smaller, right column larger */
+  gap: 2rem;
 `;
 
-const Titles= styled.h1`
+const LeftColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+`;
+
+const RightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+const TitleContainer = styled.div`
+  width: 100%;
+  margin-left: 30rem;
+  margin-bottom: 2rem; /* Space between the title and content */
+`;
+
+const Titles = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
-  text-align: left;
 `;
 
 const Subtitle = styled.h2`
@@ -461,10 +500,9 @@ const Subtitle = styled.h2`
   font-weight: bold;
   color: #00bcd4;
   font-style: italic;
-  text-align: left;
 `;
 
-const Descriptions= styled.p`
+const Descriptions = styled.p`
   font-size: 1rem;
   color: #4b5563;
 `;
@@ -503,6 +541,7 @@ const MoreText = styled.p`
   color: #9ca3af;
   cursor: pointer;
 `;
+
 
 
 
