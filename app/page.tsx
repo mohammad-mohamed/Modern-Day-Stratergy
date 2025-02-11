@@ -170,7 +170,7 @@ export default function Page() {
       </GlobalTeamContainer>
 
       <Container>
-  {/* Title Container - Above the columns */}
+  {/* Title Container - Aligned with the left column */}
   <TitleContainer>
     <Titles>SERVICING CLIENTS</Titles>
     <Subtitle>GLOBALLY</Subtitle>
@@ -475,7 +475,6 @@ const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  position: relative;
 `;
 
 const RightColumn = styled.div`
@@ -485,8 +484,8 @@ const RightColumn = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  width: 100%;
-  margin-left: 30rem;
+  width: 33%; /* Aligns with the left column */
+  text-align: left;
   margin-bottom: 2rem; /* Space between the title and content */
 `;
 
