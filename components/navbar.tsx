@@ -22,7 +22,7 @@ export const Navigation = () => {
       ${pathname === '/login' && 'hidden'}
       sticky inset-x-0 top-0 z-50 bg-black h-16 
     `}>
-      <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 h-full">
+      <nav aria-label="Global" className="flex justify-between p-6 lg:px-8 h-full">
         <div className="flex lg:flex-1">
           <div className="-m-1.5 px-1">
             <Link href="/" className="text-center text-2xl/9 font-bold tracking-tight text-white">
