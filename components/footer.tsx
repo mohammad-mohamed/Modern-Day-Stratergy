@@ -103,7 +103,7 @@ export const Footer = () => {
           <FooterColumn>
             <FooterText>Mds</FooterText>
             <p>
-              We&apos;re proudly a 5-star rated digital consultancy. With offices in
+              We&lsquo;re proudly a 5-star rated digital consultancy. With offices in
               South Africa and the Netherlands, we service clients globally.
             </p>
           </FooterColumn>
