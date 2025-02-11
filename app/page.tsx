@@ -169,7 +169,7 @@ export default function Page() {
         </ImpactSection>
       </GlobalTeamContainer>
 
-      <Container>
+<Container>
   {/* Title Container - Aligned with the left column */}
   <TitleContainer>
     <Titles>SERVICING CLIENTS</Titles>
@@ -484,7 +484,7 @@ const RightColumn = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  width: 33%; /* Aligns with the left column */
+  width: 67%; /* Aligns with the left column */
   text-align: left;
   margin-bottom: 2rem; /* Space between the title and content */
 `;
