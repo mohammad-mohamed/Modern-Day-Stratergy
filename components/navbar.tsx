@@ -25,8 +25,7 @@ export const Navigation = () => {
       <nav aria-label="Global" className="flex justify-between p-6 lg:px-8 h-full">
         <div className="flex lg:flex-1">
           <div className="-m-1.5 px-1">
-            <Link href="/" className="text-center text-2xl/9 font-bold tracking-tight text-white">
-              {/* Applying custom fonts */}
+            <Link href="/" className="text-2xl font-bold text-white">
               <span className="font-bickham">M</span><span className="font-aeonik">ds</span>
             </Link>
           </div>
@@ -35,16 +34,16 @@ export const Navigation = () => {
         {/* Centered Navigation Links */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-center space-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
+            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/#" className="text-sm/6 font-semibold text-white">
+          <Link href="/#" className="text-sm/6 font-semibold text-white">
             Consult an expert
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -65,9 +64,7 @@ export const Navigation = () => {
         <div className="fixed inset-0 z-50 bg-black/30" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-bold text-white">Mds</span>
-            </Link>
+            <Link href="/" className="text-2xl font-bold text-white">Mds</Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -82,22 +79,15 @@ export const Navigation = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800"
-                  >
+                  <Link key={item.name} href={item.href} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="py-6">
-                <a
-                  href="/#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-gray-800"
-                >
+                <Link href="/#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-gray-800">
                   Consult an Expert
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -81,87 +83,88 @@ const SocialLinks = styled.div`
 `;
 
 export const Footer = () => {
-    return (
-        <>
-          <div className="bg-gray-900 text-white">
-            <div className="flex flex-col items-center justify-center h-screen">
-              <h1 className="text-5xl font-bold">READY TO WORK</h1>
-              <h1 className="text-5xl font-bold">
-                WITH <span className="italic">Mds</span>
-              </h1>
-              <p className="mt-4 text-gray-400">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-              <FooterButton>Get started</FooterButton>
-            </div>
-          </div>
-    
-          <FooterContainer>
-            <FooterContent>
-              <FooterColumn>
-                <FooterText>Mds</FooterText>
-                <p>
-                  We're proudly a 5-star rated digital consultancy. With offices in
-                  South Africa and the Netherlands, we service clients globally.
-                </p>
-              </FooterColumn>
-              <FooterColumn>
-                <h3>Services</h3>
-                <ul>
-                  <li>Web Development</li>
-                  <li>App Development</li>
-                  <li>Digital Marketing</li>
-                  <li>UI/UX Design</li>
-                  <li>Custom Software</li>
-                </ul>
-              </FooterColumn>
-              <FooterColumn>
-                <h3>Offices</h3>
-                <ul>
-                  <li>South Africa</li>
-                  <li>De Oude Schuur, 120 Bree Street, Cape Town</li>
-                  <li>+27 (0) 76 299 4102</li>
-                  <li>Netherlands</li>
-                  <li>Stichts End 36, Ankeveen</li>
-                  <li>+31 (0) 64 918 7745</li>
-                </ul>
-              </FooterColumn>
-              <FooterColumn>
-                <h3>Get in Touch</h3>
-                <ul>
-                  <li>
-                    <a href="mailto:contact@mds.com">Contact us</a>
-                  </li>
-                </ul>
-                <h3>Social Media</h3>
-                <ul>
-                  <li>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.clutch.co" target="_blank" rel="noopener noreferrer">
-                      Clutch
-                    </a>
-                  </li>
-                </ul>
-              </FooterColumn>
-            </FooterContent>
-          </FooterContainer>
-    
-          <FooterBottom>
-            <div className="container mx-auto px-4">
-              <SocialLinks>
-                <a href="#" className="text-gray-900">
-                  Clutch
-                </a>
-                <a href="#" className="text-gray-900">
+  return (
+    <>
+      <div className="bg-gray-900 text-white">
+        <div className="flex flex-col items-center justify-center h-screen">
+          <h1 className="text-5xl font-bold">READY TO WORK</h1>
+          <h1 className="text-5xl font-bold">
+            WITH <span className="italic">Mds</span>
+          </h1>
+          <p className="mt-4 text-gray-400">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+          <FooterButton>Get started</FooterButton>
+        </div>
+      </div>
+
+      <FooterContainer>
+        <FooterContent>
+          <FooterColumn>
+            <FooterText>Mds</FooterText>
+            <p>
+              We're proudly a 5-star rated digital consultancy. With offices in
+              South Africa and the Netherlands, we service clients globally.
+            </p>
+          </FooterColumn>
+          <FooterColumn>
+            <h3>Services</h3>
+            <ul>
+              <li>Web Development</li>
+              <li>App Development</li>
+              <li>Digital Marketing</li>
+              <li>UI/UX Design</li>
+              <li>Custom Software</li>
+            </ul>
+          </FooterColumn>
+          <FooterColumn>
+            <h3>Offices</h3>
+            <ul>
+              <li>South Africa</li>
+              <li>De Oude Schuur, 120 Bree Street, Cape Town</li>
+              <li>+27 (0) 76 299 4102</li>
+              <li>Netherlands</li>
+              <li>Stichts End 36, Ankeveen</li>
+              <li>+31 (0) 64 918 7745</li>
+            </ul>
+          </FooterColumn>
+          <FooterColumn>
+            <h3>Get in Touch</h3>
+            <ul>
+              <li>
+                <a href="mailto:contact@mds.com">Contact us</a>
+              </li>
+            </ul>
+            <h3>Social Media</h3>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
-              </SocialLinks>
-            </div>
-          </FooterBottom>
-        </>
-      );
-    };
+              </li>
+              <li>
+                <a href="https://www.clutch.co" target="_blank" rel="noopener noreferrer">
+                  Clutch
+                </a>
+              </li>
+            </ul>
+          </FooterColumn>
+        </FooterContent>
+      </FooterContainer>
+
+      <FooterBottom>
+        <div className="container mx-auto px-4">
+          <SocialLinks>
+            <a href="#" className="text-gray-900">
+              Clutch
+            </a>
+            <a href="#" className="text-gray-900">
+              LinkedIn
+            </a>
+          </SocialLinks>
+        </div>
+      </FooterBottom>
+    </>
+  );
+};
+
