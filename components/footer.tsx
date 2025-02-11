@@ -73,7 +73,7 @@ const SocialLinks = styled.div`
 export const Footer = () => {
   return (
     <>
-      <div className="bg-gray-900 text-white">
+      <div className="bg-black text-white">
         <div className="flex flex-col items-center justify-center h-screen">
           <h1 className="text-5xl font-bold">READY TO WORK</h1>
           <h1 className="text-5xl font-bold">
