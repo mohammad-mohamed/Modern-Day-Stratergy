@@ -67,148 +67,182 @@ export default function Page() {
         </ContentWrapper>
 
         {/* Sentence Below Everything */}
-        <Description>
+        <ClientDescription>
         Proudly a 5-star rated digital consultancy. With offices <br />
           in South Africa and the Netherlands, we service <br />
           clients globally.
-        </Description>
+        </ClientDescription>
       </MainContainer>
 
       {/* New Section with White Background */}
       <ServicesContainer>
-        <Title>
-          <Highlight>TECHNOLOGY IS</Highlight>
-          <Highlight>ACCESSIBLE TO</Highlight>
-          <Highlight>VIRTUALLY ANYONE.</Highlight>
-          <p>BUT, <ItalicHighlight>GOOD SERVICE</ItalicHighlight></p>
-          <Highlight>IS HARD TO FIND.</Highlight>
-        </Title>
-        <Paragraph>
-          <ParagraphText>We use a platform-agnostic approach to <br />service every campaign. This allows us to <br />customize every project based on brand <br />goals and needs.</ParagraphText>
-        </Paragraph>
-        <ServicesSection>
-          <ServicesTitle>OUR SERVICES</ServicesTitle>
-          <ServicesGrid>
-            <ServiceCard>
-              <ServiceTitle>Website Design & Development</ServiceTitle>
-              <ServiceDescription>Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.</ServiceDescription>
-              <ServiceLink href="#">Find out more</ServiceLink>
-            </ServiceCard>
-            <ServiceCard>
-              <ServiceTitle>Web App Development</ServiceTitle>
-              <ServiceDescription>Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.</ServiceDescription>
-              <ServiceLink href="#">Find out more</ServiceLink>
-            </ServiceCard>
-            <ServiceCard>
-              <ServiceTitle>Mobile App Development</ServiceTitle>
-              <ServiceDescription>Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.</ServiceDescription>
-              <ServiceLink href="#">Find out more</ServiceLink>
-            </ServiceCard>
-            <ServiceCard>
-              <ServiceTitle>Custom Software Development</ServiceTitle>
-              <ServiceDescription>Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.</ServiceDescription>
-              <ServiceLink href="#">Find out more</ServiceLink>
-            </ServiceCard>
-            <ServiceCard>
-              <ServiceTitle>UI/UX Design</ServiceTitle>
-              <ServiceDescription>Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.</ServiceDescription>
-              <ServiceLink href="#">Find out more</ServiceLink>
-            </ServiceCard>
-            <ServiceCard>
-              <ServiceTitle>Digital Marketing</ServiceTitle>
-              <ServiceDescription>Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.</ServiceDescription>
-              <ServiceLink href="#">Find out more</ServiceLink>
-            </ServiceCard>
-          </ServicesGrid>
-        </ServicesSection>
+        <MaxWidthWrapper>
+          <Title>
+            <Highlight>TECHNOLOGY IS</Highlight>
+            <Highlight>ACCESSIBLE TO</Highlight>
+            <Highlight>VIRTUALLY ANYONE.</Highlight>
+            <Highlight>BUT, <BickhamG>G</BickhamG>OOD SERVICE</Highlight>
+            <Highlight>IS HARD TO FIND.</Highlight>
+          </Title>
+          
+          <Paragraph>
+            <ParagraphText>
+              {`We use a platform-agnostic approach to
+service every campaign. This allows us to
+customize every project based on brand
+goals and needs.`}
+            </ParagraphText>
+          </Paragraph>
+          
+          <ServicesSection>
+            <ServicesTitle>OUR SERVICES</ServicesTitle>
+            <ServicesGrid>
+              <ServiceCard>
+                <ServiceTitle>Website Design<br />& Development</ServiceTitle>
+                <ServiceDescription>
+                  Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.
+                </ServiceDescription>
+                <ServiceLink href="#">Find out more</ServiceLink>
+              </ServiceCard>
+              
+              <ServiceCard>
+                <ServiceTitle>Web App<br />Development</ServiceTitle>
+                <ServiceDescription>
+                  Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.
+                </ServiceDescription>
+                <ServiceLink href="#">Find out more</ServiceLink>
+              </ServiceCard>
+              
+              <ServiceCard>
+                <ServiceTitle>Mobile App<br />Development</ServiceTitle>
+                <ServiceDescription>
+                  Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.
+                </ServiceDescription>
+                <ServiceLink href="#">Find out more</ServiceLink>
+              </ServiceCard>
+              
+              <ServiceCard>
+                <ServiceTitle>Custom Software<br />Development</ServiceTitle>
+                <ServiceDescription>
+                  Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.
+                </ServiceDescription>
+                <ServiceLink href="#">Find out more</ServiceLink>
+              </ServiceCard>
+              
+              <ServiceCard>
+                <ServiceTitle>UI/UX<br />Design</ServiceTitle>
+                <ServiceDescription>
+                  Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.
+                </ServiceDescription>
+                <ServiceLink href="#">Find out more</ServiceLink>
+              </ServiceCard>
+              
+              <ServiceCard>
+                <ServiceTitle>Digital<br />Marketing</ServiceTitle>
+                <ServiceDescription>
+                  Worem ipsum dolor sit amet consectetur. Justo ipsum ac mattis facilisis pretium pulvinar fermentum vitae lectus. In augue adipiscing enim dui ut proin velit. Tincidunt.
+                </ServiceDescription>
+                <ServiceLink href="#">Find out more</ServiceLink>
+              </ServiceCard>
+            </ServicesGrid>
+          </ServicesSection>
+        </MaxWidthWrapper>
       </ServicesContainer>
        {/* Global Team Section */}
        <GlobalTeamContainer>
-        <GlobalTeamTitle>
-          WE ARE A <br /> <GlobalHighlight>GLOBAL</GlobalHighlight> TEAM
-        </GlobalTeamTitle>
+        <GlobalTeamContent>
+          <GlobalTeamTitle>
+            WE ARE A<br />
+            <GlobalText><BickhamG>G</BickhamG>LOBAL</GlobalText> TEAM
+          </GlobalTeamTitle>
 
-        <GlobalTeamSection>
-          <GlobalTeamCard>
-            <img
-              src="https://storage.googleapis.com/a1aa/image/xhW_u7xROzBVPeo1Fk9qzQy3GVAzuctFEQnSCAMBqlU.jpg"
-              alt="A view of Cape Town, South Africa"
-            />
-            <h2>CAPE TOWN</h2>
-            <p>+27 (0) 76 299 4102</p>
-            <p>De Oude Schuur,<br />120 Bree Street, Cape Town,<br />South Africa</p>
-          </GlobalTeamCard>
-          <GlobalTeamCard>
-            <img
-              src="https://storage.googleapis.com/a1aa/image/XlZklN9wA8Y0ZCIN0ATIVCN5lomEObnKlfZKW1fn_sw.jpg"
-              alt="A view of Amsterdam, Netherlands"
-            />
-            <h2>NETHERLANDS</h2>
-            <p>+31 (0) 64 918 7745</p>
-            <p>Stichts End 36, Ankeveen,<br />Netherlands</p>
-          </GlobalTeamCard>
-        </GlobalTeamSection>
+          <LocationsGrid>
+            <LocationCard>
+              <img
+                src="https://storage.googleapis.com/a1aa/image/xhW_u7xROzBVPeo1Fk9qzQy3GVAzuctFEQnSCAMBqlU.jpg"
+                alt="Cape Town cityscape"
+              />
+              <h2>CAPE <BickhamLetter>T</BickhamLetter>OWN</h2>
+              <p>+27 (0) 76 299 4102</p>
+              <p>De Oude Schuur,<br />120 Bree Street, Cape Town,<br />South Africa</p>
+            </LocationCard>
 
-        <ImpactSection>
-          <ImpactTitle>IMPACT THAT LASTS</ImpactTitle>
-          <ImpactStats>
-            <ImpactCard>
-              <h3>100%</h3>
-              <p>Worem ipsum dolor sit amet consectetur.</p>
-              <a href="#">View Services</a>
-            </ImpactCard>
-            <ImpactCard>
-              <h3>100%</h3>
-              <p>Worem ipsum dolor sit amet consectetur.</p>
-            </ImpactCard>
-            <ImpactCard>
-              <h3>20+</h3>
-              <p>Worem ipsum dolor sit amet consectetur.</p>
-            </ImpactCard>
-          </ImpactStats>
-        </ImpactSection>
+            <LocationCard>
+              <img
+                src="https://storage.googleapis.com/a1aa/image/XlZklN9wA8Y0ZCIN0ATIVCN5lomEObnKlfZKW1fn_sw.jpg"
+                alt="Amsterdam cityscape"
+              />
+              <h2>NETHER<BickhamLetter>L</BickhamLetter>ANDS</h2>
+              <p>+31 (0) 64 918 7745</p>
+              <p>Stichts End 36, Ankeveen,<br />Netherlands</p>
+            </LocationCard>
+          </LocationsGrid>
+
+          <ImpactSection>
+            <ImpactTitle>IMPACT THAT LASTS</ImpactTitle>
+            <StatsGrid>
+              <StatItem>
+                <h2>100%</h2>
+                <p>{`Worem ipsum dolor sit amet
+consectetur.`}</p>
+                <a href="#">View Services</a>
+              </StatItem>
+              <StatItem>
+                <h2>100%</h2>
+                <p>{`Worem ipsum dolor sit amet
+consectetur.`}</p>
+              </StatItem>
+              <StatItem>
+                <h2>20+</h2>
+                <p>{`Worem ipsum dolor sit amet
+consectetur.`}</p>
+              </StatItem>
+            </StatsGrid>
+          </ImpactSection>
+        </GlobalTeamContent>
       </GlobalTeamContainer>
 
 <Container>
-  {/* Title Container - Aligned with the left column */}
-  <TitleContainer>
-    <Titles>SERVICING CLIENTS</Titles>
-    <Subtitle>GLOBALLY</Subtitle>
-  </TitleContainer>
-
   <Content>
-    {/* Left Column - Descriptions */}
-    <LeftColumn>
-      <Descriptions>
-        We use a <span className="font-bold italic">platform-agnostic</span> approach to service every campaign.
-        This allows us to customize every project based on brand goals and needs.
-      </Descriptions>
-    </LeftColumn>
+    <MainTitleWrapper>
+      <MainTitle>
+        SERVICING CLIENTS
+        <GloballyText>
+          <BickhamG>G</BickhamG>LOBALLY
+        </GloballyText>
+      </MainTitle>
+    </MainTitleWrapper>
 
-    {/* Right Column - Client List */}
-    <RightColumn>
-      <ClientList>
+    <ContentGrid>
+      <ClientDescription>
+        {`We use a platform-agnostic
+approach to service every
+campaign. This allows us to
+customize every project based on
+brand goals and needs.`}
+      </ClientDescription>
+
+      <ClientsList>
         {clients.map((client, index) => (
           <ClientItem key={index}>
             {client.name}
             <img
-              alt={`Placeholder image for ${client.name}`}
-              className="hover-image ml-2"
-              height="50"
               src={client.imageUrl}
-              width="50"
+              alt={client.name}
+              width={70}
+              height={70}
             />
           </ClientItem>
         ))}
-      </ClientList>
-      {remainingClients > 0 && (
-        <MoreText onClick={addMoreClients}>+{remainingClients} More</MoreText>
-      )}
-    </RightColumn>
+        {remainingClients > 0 && (
+          <MoreClients onClick={addMoreClients}>
+            +{remainingClients} More
+          </MoreClients>
+        )}
+      </ClientsList>
+    </ContentGrid>
   </Content>
 </Container>
-
-
 
       <Footer />
 
@@ -272,47 +306,72 @@ const StyledImage = styled(Image)`
 `;
 
 const Description = styled.p`
+  font-size: 1rem;
+  color: #4b5563;
   margin-top: 2rem;
-  font-size: 1.25rem;
-  max-width: 800px;
-  color: white;
-  font-family: 'Aeonik', sans-serif;
-  text-align: center;
+  max-width: 80%;
 `;
 
 // New Styled Components for the Service Section
+const MaxWidthWrapper = styled.div`
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+`;
+
 const ServicesContainer = styled.div`
   background-color: white;
-  padding: 4rem 2rem;
-  color: black;
+  padding: 6rem 0;
+  width: 100%;
 `;
 
 const Title = styled.div`
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.2;
+  font-family: 'Aeonik', sans-serif;
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
 `;
 
 const Highlight = styled.p`
   text-decoration: underline;
-  text-decoration-color: #00f;
+  text-decoration-color: #06AED5;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-weight: 700;
+`;
+
+const BickhamG = styled.span`
+  font-family: 'Bickham Script', cursive;
+  font-size: 1.4em;
+  color: #06AED5;
 `;
 
 const ItalicHighlight = styled.span`
-  font-style: italic;
+  font-family: 'Bickham Script', cursive;
+  font-size: 1.4em;
   text-decoration: underline;
-  text-decoration-color: #00f;
+  text-decoration-color: #00A3FF;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
 `;
 
 const Paragraph = styled.div`
-  margin-top: 2rem;
+  margin: 6rem 0;
   font-size: 1.125rem;
   display: flex;
   justify-content: flex-end;
 `;
 
 const ParagraphText = styled.p`
-  width: 30%;
+  width: 31.8%;
+  font-family: 'Aeonik', sans-serif;
+  line-height: 1.6;
+  color: #4b5563;
+  white-space: pre-line;
 `;
 
 const ServicesSection = styled.div`
@@ -320,236 +379,246 @@ const ServicesSection = styled.div`
 `;
 
 const ServicesTitle = styled.h2`
+  font-family: 'Aeonik', sans-serif;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: 500;
   color: #6b7280;
+  margin-bottom: 2rem;
 `;
 
 const ServicesGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 1rem;
-
-  @media (min-width: 768px) {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 2rem;
+  
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 `;
 
-const ServiceCard = styled.div``;
+const ServiceCard = styled.div`
+  font-family: 'Aeonik', sans-serif;
+`;
 
 const ServiceTitle = styled.h3`
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 `;
 
 const ServiceDescription = styled.p`
-  margin-top: 0.5rem;
   color: #4b5563;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 `;
 
 const ServiceLink = styled.a`
-  margin-top: 0.5rem;
-  display: inline-block;
-  color: #3b82f6;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 // New Styled Components for the Global Section
-const GlobalTeamContainer = styled.section`
-  background-color: #32373B;  
-  padding: 4rem 2rem;
+const GlobalTeamContainer = styled.div`
+  background-color: #001011;
+  padding: 6rem 0;
+  width: 100%;
+`;
+
+const GlobalTeamContent = styled(MaxWidthWrapper)`
   color: white;
 `;
 
 const GlobalTeamTitle = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: left;
+  font-family: 'Aeonik', sans-serif;
+  font-size: clamp(3.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 4rem;
+  line-height: 1;
 `;
 
-const GlobalHighlight = styled.span`
-  color: #3b82f6;
-  font-style: italic;
+const GlobalText = styled.span`
+  color: #06AED5;
+  font-family: 'Aeonik', sans-serif;
 `;
 
-const GlobalTeamSection = styled.div`
+const LocationsGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  margin-bottom: 6rem;
 `;
 
-const GlobalTeamCard = styled.div`
+const LocationCard = styled.div`
   img {
-    justify-content: center;
-    width: 90%;
-    height: 40%;
+    width: 100%;
+    height: 300px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
   }
 
   h2 {
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: 'Aeonik', sans-serif;
   }
 
   p {
-    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #94A3B8;
+    margin: 0.5rem 0;
   }
+`;
+
+const BickhamLetter = styled.span`
+  font-family: 'Bickham Script', cursive;
+  font-size: 1.4em;
 `;
 
 const ImpactSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 2rem;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-`;
-
-const ImpactTitle = styled.div`
-  flex: 1;
-  font-size: 1.125rem;
-  font-weight: 600;
-`;
-
-const ImpactStats = styled.div`
-  flex: 3;
+  margin-top: 6rem;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 2rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  align-items: start;
 `;
 
-const ImpactCard = styled.div`
-  h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
+const ImpactTitle = styled.h3`
+  font-size: 0.875rem;
+  color: #94A3B8;
+  font-weight: 500;
+  padding-top: 1rem;
+`;
+
+const StatsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+`;
+
+const StatItem = styled.div`
+  h2 {
+    font-size: clamp(4rem, 6vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Aeonik', sans-serif;
+    line-height: 1;
   }
 
   p {
-    margin: 0.5rem 0;
+    color: #94A3B8;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
   }
 
   a {
-    color: #3b82f6;
+    color: white;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
 const Container = styled.div`
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 1rem;
-  flex-direction: column; /* Stack title and content vertically */
+  padding: 6rem 0;
+  width: 100%;
+`;
+
+const Content = styled(MaxWidthWrapper)`
   position: relative;
-`;
-
-const Content = styled.div`
-  max-width: 1024px;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 2rem;
+`;
+
+const MainTitleWrapper = styled.div`
+  margin-bottom: 6rem;
+`;
+
+const MainTitle = styled.h1`
+  font-family: 'Aeonik', sans-serif;
+  font-size: clamp(3.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
+const GloballyText = styled.div`
+  color: #06AED5;
+  font-family: 'Aeonik', sans-serif;
+  font-size: clamp(3.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  margin-top: 0.5rem;
+`;
+
+const ContentGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Left column smaller, right column larger */
-  gap: 2rem;
+  grid-template-columns: 25% auto;
+  gap: 4rem;
 `;
 
-const LeftColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
-const RightColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
-const TitleContainer = styled.div`
-  width: 67%; /* Aligns with the left column */
-  text-align: left;
-  margin-bottom: 2rem; /* Space between the title and content */
-`;
-
-const Titles = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bold;
-`;
-
-const Subtitle = styled.h2`
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #00bcd4;
-  font-style: italic;
-`;
-
-const Descriptions = styled.p`
+const ClientDescription = styled.p`
   font-size: 1rem;
-  color: #4b5563;
+  color:rgb(0, 0, 0);
+  padding-top: 1rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  font-weight: 500;
 `;
 
-const ClientList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  font-size: 1.5rem;
-  color: #4b5563;
+const ClientsList = styled.div`
+  border-left: 1px solid #e5e7eb;
+  padding-left: 4rem;
 `;
 
-const ClientItem = styled.li`
-  border-bottom: 1px solid #d1d5db;
-  padding-bottom: 0.25rem;
+const ClientItem = styled.div`
+  font-size: 4rem;
+  font-weight: 550;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  font-family: 'Aeonik', sans-serif;
 
   &:hover {
-    color: #3b82f6;
+    color: #06AED5;
   }
 
-  .hover-image {
+  img {
     display: none;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
   }
 
-  &:hover .hover-image {
-    display: inline-block;
+  &:hover img {
+    display: block;
   }
 `;
 
-const MoreText = styled.p`
-  margin-top: 1rem;
-  font-size: 1.5rem;
+const MoreClients = styled.div`
+  font-size: 4rem;
   color: #9ca3af;
+  padding: 1.5rem 0;
   cursor: pointer;
+  font-family: 'Aeonik', sans-serif;
 `;
-
-
-
-
-// const StyledText = styled.h1`
-//   font-size: 80px;
-//   line-height: 1.1;
-//   text-align: center;
-//   color: white;
-//   display: flex;
-//   flex-direction: column;
-//   font-family: 'Aeonik', sans-serif;
-// `;
