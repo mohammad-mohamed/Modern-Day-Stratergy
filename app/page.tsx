@@ -305,12 +305,12 @@ const StyledImage = styled(Image)`
   }
 `;
 
-const Description = styled.p`
-  font-size: 1rem;
-  color: #4b5563;
-  margin-top: 2rem;
-  max-width: 80%;
-`;
+// const Description = styled.p`
+//   font-size: 1rem;
+//   color: #4b5563;
+//   margin-top: 2rem;
+//   max-width: 80%;
+// `;
 
 // New Styled Components for the Service Section
 const MaxWidthWrapper = styled.div`
@@ -350,14 +350,14 @@ const BickhamG = styled.span`
   color: #06AED5;
 `;
 
-const ItalicHighlight = styled.span`
-  font-family: 'Bickham Script', cursive;
-  font-size: 1.4em;
-  text-decoration: underline;
-  text-decoration-color: #00A3FF;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 8px;
-`;
+// const ItalicHighlight = styled.span`
+//   font-family: 'Bickham Script', cursive;
+//   font-size: 1.4em;
+//   text-decoration: underline;
+//   text-decoration-color: #00A3FF;
+//   text-decoration-thickness: 4px;
+//   text-underline-offset: 8px;
+// `;
 
 const Paragraph = styled.div`
   margin: 6rem 0;
