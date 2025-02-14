@@ -6,6 +6,95 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { useState } from 'react';
 
+const ImageStack = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+`;
+
+const StyledImageWrapper = styled.div<{ 
+  rotation: string; 
+  zIndex: number; 
+  translateX: string; 
+  translateY: string;
+  position: number;
+}>`
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  transform: ${props => `rotate(${props.rotation}) translate(${props.translateX}, ${props.translateY})`};
+  z-index: ${props => props.zIndex};
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: ${props => props.position === 1 ? 1 : props.position === 2 ? 0.9 : 0.8};
+`;
+
+const StyledImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+`;
+
+const UXLabel = styled.span`
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  z-index: 10;
+`;
+
+const StyledImages = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+`;
+
+const LeftText = styled.h1`
+  position: absolute;
+  left: 9%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 120px;
+  line-height: 1.1;
+  text-align: right;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Aeonik', sans-serif;
+  z-index: 4;
+`;
+
+const RightText = styled.h1`
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 120px;
+  line-height: 1.1;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Aeonik', sans-serif;
+  z-index: 4;
+`;
+
 export default function Page() {
   const clientsData = [
     { name: 'Engen', imageUrl: 'https://storage.googleapis.com/a1aa/image/XLLOX5jUcAMLvl-IAoJexuIwWyhBVHu2NyaGpHBAz_0.jpg' },
@@ -35,35 +124,74 @@ export default function Page() {
     setClients([...clients, ...newClientItems]);
     setRemainingClients(remainingClients - 10);
   };
+
+  const [images, setImages] = useState([
+    { id: 1, src: "https://storage.googleapis.com/a1aa/image/QlF_IvUCVK9P9smVe08BR29_Vm1R6g6Ol9P8aRCIz1Y.jpg", alt: "Digital service 1" },
+    { id: 2, src: "https://storage.googleapis.com/a1aa/image/QlF_IvUCVK9P9smVe08BR29_Vm1R6g6Ol9P8aRCIz1Y.jpg", alt: "Digital service 2" },
+    { id: 3, src: "https://storage.googleapis.com/a1aa/image/QlF_IvUCVK9P9smVe08BR29_Vm1R6g6Ol9P8aRCIz1Y.jpg", alt: "Digital service 3" }
+  ]);
+
+  const rotateImages = () => {
+    setImages(prevImages => {
+      const newImages = [...prevImages];
+      const firstImage = newImages.shift();
+      if (firstImage) newImages.push(firstImage);
+      return newImages;
+    });
+  };
+
+  const getImageStyles = (index: number) => {
+    const styles = [
+      { rotation: "-8deg", zIndex: 3, translateX: "0px", translateY: "0px" },
+      { rotation: "0deg", zIndex: 2, translateX: "0px", translateY: "0px" },
+      { rotation: "8deg", zIndex: 1, translateX: "0px", translateY: "0px" }
+    ];
+    return styles[index];
+  };
+
   return (
     <>
       <Navigation />
       <MainContainer>
         <ContentWrapper>
           {/* Left Side Text */}
-          <StyledText>
+          <LeftText>
             <span>HIGH</span>
             <span>
               <BickhamD>D</BickhamD>IGITAL
             </span>
-          </StyledText>
+          </LeftText>
 
-          {/* Centered Image */}
-          <ImageContainer>
-            <StyledImage
-              alt="Person working on a laptop"
-              src="https://storage.googleapis.com/a1aa/image/QlF_IvUCVK9P9smVe08BR29_Vm1R6g6Ol9P8aRCIz1Y.jpg"
-              width={400}
-              height={500}
-              priority
-            />
-          </ImageContainer>
+          {/* Centered Image Stack */}
+          <ImageStack onClick={rotateImages}>
+            {images.map((image, index) => {
+              const styles = getImageStyles(index);
+              return (
+                <StyledImageWrapper
+                  key={image.id}
+                  rotation={styles.rotation}
+                  zIndex={styles.zIndex}
+                  translateX={styles.translateX}
+                  translateY={styles.translateY}
+                  position={index + 1}
+                >
+                  <StyledImageContainer>
+                    <UXLabel>UX DESIGN</UXLabel>
+                    <StyledImages
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </StyledImageContainer>
+                </StyledImageWrapper>
+              );
+            })}
+          </ImageStack>
 
           {/* Right Side Text */}
-          <StyledText>
+          <RightText>
             <span>QUALITY</span>
             <span>SERVICES</span>
-          </StyledText>
+          </RightText>
         </ContentWrapper>
 
         {/* Sentence Below Everything */}
@@ -264,15 +392,11 @@ const MainContainer = styled.main`
 `;
 
 const ContentWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
 `;
 
 const StyledText = styled.h1`
@@ -287,7 +411,7 @@ const StyledText = styled.h1`
 
 const BickhamD = styled.span`
   font-family: 'Bickham Script', cursive;
-  font-size: 90px;
+  fon
 `;
 
 const ImageContainer = styled.div`
