@@ -399,35 +399,35 @@ const ContentWrapper = styled.section`
   margin: 0 auto;
 `;
 
-const StyledText = styled.h1`
-  font-size: 80px;
-  line-height: 1.1;
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Aeonik', sans-serif;
-`;
+// const StyledText = styled.h1`
+//   font-size: 80px;
+//   line-height: 1.1;
+//   text-align: center;
+//   color: white;
+//   display: flex;
+//   flex-direction: column;
+//   font-family: 'Aeonik', sans-serif;
+// `;
 
 const BickhamD = styled.span`
   font-family: 'Bickham Script', cursive;
   fon
 `;
 
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+// const ImageContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
-const StyledImage = styled(Image)`
-  width: 300px;
-  height: auto;
+// const StyledImage = styled(Image)`
+//   width: 300px;
+//   height: auto;
 
-  @media (min-width: 768px) {
-    width: 400px;
-  }
-`;
+//   @media (min-width: 768px) {
+//     width: 400px;
+//   }
+// `;
 
 // const Description = styled.p`
 //   font-size: 1rem;
