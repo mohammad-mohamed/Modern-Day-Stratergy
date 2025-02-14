@@ -3,7 +3,7 @@ import { Navigation } from '../components/navbar';
 import { Footer } from '../components/footer';
 
 import styled from 'styled-components';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useState } from 'react';
 
 const ImageStack = styled.div`
