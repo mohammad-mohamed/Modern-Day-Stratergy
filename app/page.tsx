@@ -470,8 +470,7 @@ const Highlight = styled.p`
 
 const BickhamG = styled.span`
   font-family: 'Bickham Script', cursive;
-  font-size: 1.4em;
-  color: #06AED5;
+  
 `;
 
 // const ItalicHighlight = styled.span`
