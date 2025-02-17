@@ -76,7 +76,7 @@ const LeftText = styled.h1`
   color: white;
   display: flex;
   flex-direction: column;
-  font-family: 'Aeonik', sans-serif;
+  font-family: var(--font-aeonik);
   z-index: 4;
 `;
 
@@ -91,7 +91,7 @@ const RightText = styled.h1`
   color: white;
   display: flex;
   flex-direction: column;
-  font-family: 'Aeonik', sans-serif;
+  font-family: var(--font-aeonik);
   z-index: 4;
 `;
 
@@ -150,7 +150,7 @@ export default function Page() {
   };
 
   return (
-    <>
+    <main>
       <Navigation />
       <MainContainer>
         <ContentWrapper>
@@ -158,7 +158,7 @@ export default function Page() {
           <LeftText>
             <span>HIGH</span>
             <span>
-              <BickhamD>D</BickhamD>IGITAL
+              <div><span>D</span>IGITAL</div>
             </span>
           </LeftText>
 
@@ -374,7 +374,7 @@ brand goals and needs.`}
 
       <Footer />
 
-    </>
+    </main>
   );
 }
 
@@ -388,7 +388,7 @@ const MainContainer = styled.main`
   min-height: 100vh;
   padding: 1rem;
   background-color: black;
-  font-family: 'Aeonik', sans-serif;
+  font-family: var(--font-aeonik);
 `;
 
 const ContentWrapper = styled.section`
@@ -451,7 +451,7 @@ const ServicesContainer = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: 'Aeonik', sans-serif;
+  font-family: var(--font-aeonik);
   font-size: clamp(3.5rem, 6vw, 5rem);
   font-weight: 700;
   line-height: 1;
@@ -469,8 +469,7 @@ const Highlight = styled.p`
 `;
 
 const BickhamG = styled.span`
-  font-family: 'Bickham Script', cursive;
-  
+  font-family: var(--font-bickham);
 `;
 
 // const ItalicHighlight = styled.span`
