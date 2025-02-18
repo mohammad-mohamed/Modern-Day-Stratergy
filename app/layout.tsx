@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local';
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import { fontAeonik, fontBickhamScript } from "@/assets/fonts";
 
-const Aeonik = localFont({ 
-  src: './fonts/_Aeonik-Regular.otf',
-  variable: '--font-aeonik',
-});
-
-const BickhamScript = localFont({ 
-  src: './fonts/_Bickham Script Pro Regular.ttf',
-  variable: '--font-bickham',
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Aeonik.variable} ${BickhamScript.variable}`}>
+      <body className={`${cn('antialiased', fontAeonik.variable)} ${cn('antialiased', fontBickhamScript.variable)}`}>
         {children}
       </body>
     </html>

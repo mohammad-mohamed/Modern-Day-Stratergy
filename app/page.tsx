@@ -76,7 +76,7 @@ const LeftText = styled.h1`
   color: white;
   display: flex;
   flex-direction: column;
-  font-family: var(--font-aeonik);
+  
   z-index: 4;
 `;
 
@@ -91,7 +91,7 @@ const RightText = styled.h1`
   color: white;
   display: flex;
   flex-direction: column;
-  font-family: var(--font-aeonik);
+  
   z-index: 4;
 `;
 
@@ -152,7 +152,7 @@ export default function Page() {
   return (
     <main>
       <Navigation />
-      <MainContainer>
+      <MainContainer className='font-calAeonik'>
         <ContentWrapper>
           {/* Left Side Text */}
           <LeftText>
@@ -388,7 +388,7 @@ const MainContainer = styled.main`
   min-height: 100vh;
   padding: 1rem;
   background-color: black;
-  font-family: var(--font-aeonik);
+  
 `;
 
 const ContentWrapper = styled.section`
@@ -409,10 +409,10 @@ const ContentWrapper = styled.section`
 //   font-family: 'Aeonik', sans-serif;
 // `;
 
-const BickhamD = styled.span`
-  font-family: 'Bickham Script', cursive;
-  fon
-`;
+// const BickhamD = styled.span`
+//   font-family: 'Bickham Script', cursive;
+//   fon
+// `;
 
 // const ImageContainer = styled.div`
 //   display: flex;
@@ -451,7 +451,7 @@ const ServicesContainer = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: var(--font-aeonik);
+  
   font-size: clamp(3.5rem, 6vw, 5rem);
   font-weight: 700;
   line-height: 1;
@@ -469,7 +469,7 @@ const Highlight = styled.p`
 `;
 
 const BickhamG = styled.span`
-  font-family: var(--font-bickham);
+  font-family: var(--font-calBickham);
 `;
 
 // const ItalicHighlight = styled.span`
