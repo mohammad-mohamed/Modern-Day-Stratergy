@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cn('antialiased', fontAeonik.variable)} ${cn('antialiased', fontBickhamScript.variable)}`}>
+        <body className={`${cn('antialiased', fontAeonik.variable, fontBickhamScript.variable)}`}>
         {children}
       </body>
     </html>

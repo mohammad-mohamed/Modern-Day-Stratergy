@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
-
 import { fontFamily } from 'tailwindcss/defaultTheme';
-
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,8 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        calAeonik: ['var(--font-calAeonik)', ...fontFamily.sans],
-        calBickham: ['var(--font-calBickham)', ...fontFamily.sans],
+        aeonik: ['var(--font-aeonik)', ...fontFamily.sans],
+        bickham: ['var(--font-bickham)', ...fontFamily.sans],
       },
     },
   },

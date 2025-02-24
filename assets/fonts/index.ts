@@ -1,12 +1,11 @@
-import local from 'next/font/local';
+import localFont from 'next/font/local';
 
-export const fontAeonik = local({
-  src: '../fonts/_Aeonik-Regular.otf',
+export const fontAeonik = localFont({
+  src: './Aeonik-Regular.otf',
   variable: '--font-aeonik',
 });
 
-export const fontBickhamScript = local({
-  src: '../fonts/_Bickham Script Pro Regular.ttf',
-
+export const fontBickhamScript = localFont({
+  src: './Bickham-Script-Pro-Regular.ttf',
   variable: '--font-bickham',
 });

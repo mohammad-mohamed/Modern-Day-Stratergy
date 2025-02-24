@@ -1,6 +1,8 @@
 "use client"
 import { Navigation } from '../components/navbar';
 import { Footer } from '../components/footer';
+// import { fontAeonik, fontBickhamScript } from '../assets/fonts';
+// import { cn } from '../lib/utils';
 
 import styled from 'styled-components';
 // import Image from 'next/image';
@@ -152,7 +154,7 @@ export default function Page() {
   return (
     <main>
       <Navigation />
-      <MainContainer className='font-calAeonik'>
+      <MainContainer className='font-aeonik'>
         <ContentWrapper>
           {/* Left Side Text */}
           <LeftText>
@@ -469,7 +471,7 @@ const Highlight = styled.p`
 `;
 
 const BickhamG = styled.span`
-  font-family: var(--font-calBickham);
+  font-family: var(--font-bickham);
 `;
 
 // const ItalicHighlight = styled.span`
