@@ -3,6 +3,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MaxWidthWrapper } from '@/components/ui/max-width-wrapper';
+import localfont from "next/font/local"
+
+const bickhamFont = localfont({
+  src: "../public/fonts/Bickham-regular.ttf"
+})
+
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -136,9 +142,13 @@ const SocialLinks = styled.div`
   }
 `;
 
-const BickhamD = styled.span`
-  font-family: 'Bickham Script', cursive;
-  font-size: 90px;
+const BickhamMm = styled.span`
+  font-size: 50px;
+`;
+
+const BickhamM = styled.span`
+  font-size: 120px;
+  font-weight: 100;
 `;
 
 
@@ -149,7 +159,7 @@ export const Footer = () => {
         <MaxWidthWrapper>
           <h1 className="text-7xl font-bold">READY TO WORK</h1>
           <h1 className="text-7xl font-bold">
-            WITH <span><BickhamD>M</BickhamD>ds</span>
+            WITH <span><BickhamM className = {`${bickhamFont.className}`}>M</BickhamM>ds</span>
           </h1>
           <p className="mt-4 text-gray-400">
             Lorem ipsum dolor sit amet consectetur.
@@ -161,7 +171,7 @@ export const Footer = () => {
       <FooterContent>
         <StyledMaxWidthWrapper>
           <FooterColumn>
-            <FooterLogo>Mds</FooterLogo>
+            <FooterLogo><BickhamMm className = {`${bickhamFont.className}`}>M</BickhamMm>ds</FooterLogo>
             <FooterDescription>{`We're proudly a 5-star rated digital
 consultancy. With offices in South Africa and
 the Netherlands, we service clients globally.`}</FooterDescription>

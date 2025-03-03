@@ -6,6 +6,12 @@ import styled from 'styled-components';
 // import Image from 'next/image';
 import { useState } from 'react';
 
+import localfont from "next/font/local"
+
+const bickhamFont = localfont({
+  src: "../public/fonts/Bickham-regular.ttf"
+})
+
 const ImageStack = styled.div`
   position: absolute;
   left: 50%;
@@ -67,11 +73,11 @@ const StyledImages = styled.img`
 
 const LeftText = styled.h1`
   position: absolute;
-  left: 9%;
-  top: 50%;
+  left: 3%;
+  top: 55%;
   transform: translateY(-50%);
   font-size: 120px;
-  line-height: 1.1;
+  line-height: 0.8;
   text-align: right;
   color: white;
   display: flex;
@@ -158,7 +164,7 @@ export default function Page() {
           <LeftText>
             <span>HIGH</span>
             <span>
-              <BickhamD>D</BickhamD>IGITAL
+              <BickhamD className = {`${bickhamFont.className}`}>D</BickhamD>IGITAL
             </span>
           </LeftText>
 
@@ -196,7 +202,7 @@ export default function Page() {
 
         {/* Sentence Below Everything */}
         <ClientDescription>
-        Proudly a 5-star rated digital consultancy. With offices <br />
+          Proudly a 5-star rated digital consultancy. With offices <br />
           in South Africa and the Netherlands, we service <br />
           clients globally.
         </ClientDescription>
@@ -209,7 +215,7 @@ export default function Page() {
             <Highlight>TECHNOLOGY IS</Highlight>
             <Highlight>ACCESSIBLE TO</Highlight>
             <Highlight>VIRTUALLY ANYONE.</Highlight>
-            <Highlight>BUT, <BickhamG>G</BickhamG>OOD SERVICE</Highlight>
+            <Highlight>BUT, <BickhamG className = {`${bickhamFont.className}`}>G</BickhamG>OOD SERVICE</Highlight>
             <Highlight>IS HARD TO FIND.</Highlight>
           </Title>
           
@@ -281,7 +287,7 @@ goals and needs.`}
         <GlobalTeamContent>
           <GlobalTeamTitle>
             WE ARE A<br />
-            <GlobalText><BickhamG>G</BickhamG>LOBAL</GlobalText> TEAM
+            <GlobalText><BickhamG className = {`${bickhamFont.className}`}>G</BickhamG>LOBAL</GlobalText> TEAM
           </GlobalTeamTitle>
 
           <LocationsGrid>
@@ -290,7 +296,7 @@ goals and needs.`}
                 src="https://storage.googleapis.com/a1aa/image/xhW_u7xROzBVPeo1Fk9qzQy3GVAzuctFEQnSCAMBqlU.jpg"
                 alt="Cape Town cityscape"
               />
-              <h2>CAPE <BickhamLetter>T</BickhamLetter>OWN</h2>
+              <h2>CAPE <BickhamLetter className = {`${bickhamFont.className}`}>T</BickhamLetter>OWN</h2>
               <p>+27 (0) 76 299 4102</p>
               <p>De Oude Schuur,<br />120 Bree Street, Cape Town,<br />South Africa</p>
             </LocationCard>
@@ -300,7 +306,7 @@ goals and needs.`}
                 src="https://storage.googleapis.com/a1aa/image/XlZklN9wA8Y0ZCIN0ATIVCN5lomEObnKlfZKW1fn_sw.jpg"
                 alt="Amsterdam cityscape"
               />
-              <h2>NETHER<BickhamLetter>L</BickhamLetter>ANDS</h2>
+              <h2>NETHER<BickhamLetter className = {`${bickhamFont.className}`}>L</BickhamLetter>ANDS</h2>
               <p>+31 (0) 64 918 7745</p>
               <p>Stichts End 36, Ankeveen,<br />Netherlands</p>
             </LocationCard>
@@ -336,7 +342,7 @@ consectetur.`}</p>
       <MainTitle>
         SERVICING CLIENTS
         <GloballyText>
-          <BickhamG>G</BickhamG>LOBALLY
+          <BickhamG className = {`${bickhamFont.className}`}>G</BickhamG>LOBALLY
         </GloballyText>
       </MainTitle>
     </MainTitleWrapper>
@@ -395,7 +401,7 @@ const ContentWrapper = styled.section`
   position: relative;
   width: 100%;
   max-width: 1440px;
-  height: 100vh;
+  height: 70vh;
   margin: 0 auto;
 `;
 
@@ -410,8 +416,8 @@ const ContentWrapper = styled.section`
 // `;
 
 const BickhamD = styled.span`
-  font-family: 'Bickham Script', cursive;
-  fon
+  font-size: 240px
+  
 `;
 
 // const ImageContainer = styled.div`
@@ -469,7 +475,9 @@ const Highlight = styled.p`
 `;
 
 const BickhamG = styled.span`
-  font-family: 'Bickham Script', cursive;
+  font-size: 180px;  
+  font-weight: 140;
+
   
 `;
 
@@ -605,8 +613,8 @@ const LocationCard = styled.div`
 `;
 
 const BickhamLetter = styled.span`
-  font-family: 'Bickham Script', cursive;
-  font-size: 1.4em;
+
+  font-size: 2.1em;
 `;
 
 const ImpactSection = styled.div`
@@ -699,8 +707,8 @@ const ContentGrid = styled.div`
 
 const ClientDescription = styled.p`
   font-size: 1rem;
-  color:rgb(0, 0, 0);
-  padding-top: 1rem;
+  color:rgb(255, 255, 255);
+  
   line-height: 1.6;
   white-space: pre-line;
   font-weight: 500;

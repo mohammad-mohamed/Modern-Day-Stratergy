@@ -6,6 +6,11 @@ import { usePathname } from "next/navigation";
 import Link from 'next/link'
 import styled from 'styled-components';
 import 'flag-icons/css/flag-icons.min.css'
+import localfont from "next/font/local"
+
+const bickhamFont = localfont({
+  src: "../public/fonts/Bickham-regular.ttf"
+})
 
 const FlagCircle = styled.span`
   display: inline-block;
@@ -52,6 +57,11 @@ const DropdownItem = styled.button`
   }
 `;
 
+const BickhamM = styled.span`
+  font-size: 40px;
+  font-weight: 100;
+`;
+
 // Language options with updated flag classes
 const languages = [
   { code: 'gb', name: 'English', flag: 'fi fi-gb fis' },
@@ -79,9 +89,9 @@ export const Navigation = () => {
     `}>
       <nav aria-label="Global" className="flex justify-between p-6 lg:px-8 h-full items-center">
         <div className="flex lg:flex-1">
-          <div className="-m-1.5 px-1">
+          <div className="-m-1.5 px-11">
             <Link href="/" className="text-2xl font-bold text-white">
-              <span className="font-bickham">M</span><span className="font-aeonik">ds</span>
+              <BickhamM className = {`${bickhamFont.className}`}>M</BickhamM><span className="font-aeonik">ds</span>
             </Link>
           </div>
         </div>
@@ -149,7 +159,7 @@ export const Navigation = () => {
         <div className="fixed inset-0 z-50 bg-black/30" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-white">Mds</Link>
+            <Link href="/" className="text-2xl font-bold text-white"><BickhamM className = {`${bickhamFont.className}`}>M</BickhamM>ds</Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
