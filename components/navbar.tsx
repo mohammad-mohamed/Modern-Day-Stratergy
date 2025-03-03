@@ -13,7 +13,7 @@ const bickhamFont = localfont({
 })
 
 const aeonikFont = localfont({
-  src: "../public/fonts/Aeonik-regular.ttf"
+  src: "../public/fonts/Aeonik-Regular.ttf"
 })
 
 const FlagCircle = styled.span`
@@ -91,7 +91,7 @@ export const Navigation = () => {
 
     <header className={`
       ${pathname === '/login' && 'hidden'}
-      sticky inset-x-0 top-0 z-50 bg-black h-16 
+      fixed-sticky inset-x-0 top-0 z-50 bg-black h-16 
       `}>
       <nav aria-label="Global" className="flex justify-between p-6 lg:px-8 h-full items-center">
         <div className="flex lg:flex-1">

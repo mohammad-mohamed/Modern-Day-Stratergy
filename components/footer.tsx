@@ -10,7 +10,7 @@ const bickhamFont = localfont({
 })
 
 const aeonikFont = localfont({
-  src: "../public/fonts/Aeonik-regular.ttf"
+  src: "../public/fonts/Aeonik-Regular.ttf"
 })
 
 
