@@ -12,6 +12,11 @@ const bickhamFont = localfont({
   src: "../public/fonts/Bickham-regular.ttf"
 })
 
+const aeonikFont = localfont({
+  src: "../public/fonts/Aeonik-regular.ttf"
+})
+
+
 const ImageStack = styled.div`
   position: absolute;
   left: 50%;
@@ -82,7 +87,6 @@ const LeftText = styled.h1`
   color: white;
   display: flex;
   flex-direction: column;
-  font-family: 'Aeonik', sans-serif;
   z-index: 4;
 `;
 
@@ -97,7 +101,6 @@ const RightText = styled.h1`
   color: white;
   display: flex;
   flex-direction: column;
-  font-family: 'Aeonik', sans-serif;
   z-index: 4;
 `;
 
@@ -158,7 +161,7 @@ export default function Page() {
   return (
     <>
       <Navigation />
-      <MainContainer>
+      <MainContainer className = {`${aeonikFont.className}`}>
         <ContentWrapper>
           {/* Left Side Text */}
           <LeftText>
@@ -201,15 +204,15 @@ export default function Page() {
         </ContentWrapper>
 
         {/* Sentence Below Everything */}
-        <ClientDescription>
+        <ClientDescriptions>
           Proudly a 5-star rated digital consultancy. With offices <br />
           in South Africa and the Netherlands, we service <br />
           clients globally.
-        </ClientDescription>
+        </ClientDescriptions>
       </MainContainer>
 
       {/* New Section with White Background */}
-      <ServicesContainer>
+      <ServicesContainer className = {`${aeonikFont.className}`}>
         <MaxWidthWrapper>
           <Title>
             <Highlight>TECHNOLOGY IS</Highlight>
@@ -283,7 +286,7 @@ goals and needs.`}
         </MaxWidthWrapper>
       </ServicesContainer>
        {/* Global Team Section */}
-       <GlobalTeamContainer>
+       <GlobalTeamContainer className = {`${aeonikFont.className}`}>
         <GlobalTeamContent>
           <GlobalTeamTitle>
             WE ARE A<br />
@@ -336,7 +339,7 @@ consectetur.`}</p>
         </GlobalTeamContent>
       </GlobalTeamContainer>
 
-<Container>
+<Container className = {`${aeonikFont.className}`}>
   <Content>
     <MainTitleWrapper>
       <MainTitle>
@@ -394,7 +397,6 @@ const MainContainer = styled.main`
   min-height: 100vh;
   padding: 1rem;
   background-color: black;
-  font-family: 'Aeonik', sans-serif;
 `;
 
 const ContentWrapper = styled.section`
@@ -412,8 +414,7 @@ const ContentWrapper = styled.section`
 //   color: white;
 //   display: flex;
 //   flex-direction: column;
-//   font-family: 'Aeonik', sans-serif;
-// `;
+// // `;
 
 const BickhamD = styled.span`
   font-size: 240px
@@ -457,7 +458,6 @@ const ServicesContainer = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: 'Aeonik', sans-serif;
   font-size: clamp(3.5rem, 6vw, 5rem);
   font-weight: 700;
   line-height: 1;
@@ -499,7 +499,6 @@ const Paragraph = styled.div`
 
 const ParagraphText = styled.p`
   width: 31.8%;
-  font-family: 'Aeonik', sans-serif;
   line-height: 1.6;
   color: #4b5563;
   white-space: pre-line;
@@ -510,7 +509,6 @@ const ServicesSection = styled.div`
 `;
 
 const ServicesTitle = styled.h2`
-  font-family: 'Aeonik', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: #6b7280;
@@ -532,7 +530,6 @@ const ServicesGrid = styled.div`
 `;
 
 const ServiceCard = styled.div`
-  font-family: 'Aeonik', sans-serif;
 `;
 
 const ServiceTitle = styled.h3`
@@ -570,7 +567,6 @@ const GlobalTeamContent = styled(MaxWidthWrapper)`
 `;
 
 const GlobalTeamTitle = styled.h1`
-  font-family: 'Aeonik', sans-serif;
   font-size: clamp(3.5rem, 5vw, 4.5rem);
   font-weight: 700;
   margin-bottom: 4rem;
@@ -579,7 +575,6 @@ const GlobalTeamTitle = styled.h1`
 
 const GlobalText = styled.span`
   color: #06AED5;
-  font-family: 'Aeonik', sans-serif;
 `;
 
 const LocationsGrid = styled.div`
@@ -602,8 +597,7 @@ const LocationCard = styled.div`
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    font-family: 'Aeonik', sans-serif;
-  }
+    }
 
   p {
     font-size: 1rem;
@@ -643,8 +637,7 @@ const StatItem = styled.div`
     font-size: clamp(4rem, 6vw, 5rem);
     font-weight: 700;
     margin-bottom: 1rem;
-    font-family: 'Aeonik', sans-serif;
-    line-height: 1;
+      line-height: 1;
   }
 
   p {
@@ -656,7 +649,7 @@ const StatItem = styled.div`
   }
 
   a {
-    color: white;
+    color: #FFFCFF;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -665,7 +658,7 @@ const StatItem = styled.div`
 `;
 
 const Container = styled.div`
-  background-color: white;
+  background-color: #FFFCFF;
   padding: 6rem 0;
   width: 100%;
 `;
@@ -683,7 +676,6 @@ const MainTitleWrapper = styled.div`
 `;
 
 const MainTitle = styled.h1`
-  font-family: 'Aeonik', sans-serif;
   font-size: clamp(3.5rem, 5vw, 4.5rem);
   font-weight: 700;
   line-height: 1;
@@ -693,7 +685,6 @@ const MainTitle = styled.h1`
 
 const GloballyText = styled.div`
   color: #06AED5;
-  font-family: 'Aeonik', sans-serif;
   font-size: clamp(3.5rem, 5vw, 4.5rem);
   font-weight: 700;
   margin-top: 0.5rem;
@@ -705,9 +696,18 @@ const ContentGrid = styled.div`
   gap: 4rem;
 `;
 
+const ClientDescriptions = styled.p`
+  font-size: 1rem;
+  color: #FFFCFF;
+  
+  line-height: 1.6;
+  white-space: pre-line;
+  font-weight: 500;
+`;
+
 const ClientDescription = styled.p`
   font-size: 1rem;
-  color:rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
   
   line-height: 1.6;
   white-space: pre-line;
@@ -715,20 +715,19 @@ const ClientDescription = styled.p`
 `;
 
 const ClientsList = styled.div`
-  border-left: 1px solid #e5e7eb;
+  border-left: 1px solid #FFFCFF;
   padding-left: 4rem;
 `;
 
 const ClientItem = styled.div`
   font-size: 4rem;
-  font-weight: 550;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #e5e7eb;
+  font-weight: 650;
+  padding: 1rem 0;
+  border-bottom: 1px solid #FFFCFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-family: 'Aeonik', sans-serif;
 
   &:hover {
     color: #06AED5;
@@ -749,7 +748,6 @@ const ClientItem = styled.div`
 const MoreClients = styled.div`
   font-size: 4rem;
   color: #9ca3af;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   cursor: pointer;
-  font-family: 'Aeonik', sans-serif;
 `;

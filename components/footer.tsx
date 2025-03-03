@@ -9,6 +9,11 @@ const bickhamFont = localfont({
   src: "../public/fonts/Bickham-regular.ttf"
 })
 
+const aeonikFont = localfont({
+  src: "../public/fonts/Aeonik-regular.ttf"
+})
+
+
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -16,15 +21,15 @@ const FooterContainer = styled.footer`
 
 const ReadyToWorkSection = styled.div`
   background-color:rgb(0, 0, 0);
-  color: white;
+  color: #FFFCFF;
   padding: 8rem 0;
   text-align: center;
 `;
 
 const FooterButton = styled.button`
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  color: #FFFCFF;
+  border: 1px solid #FFFCFF;
   border-radius: 10px;
   padding: 0.75rem 2rem;
   margin-top: 2rem;
@@ -32,13 +37,13 @@ const FooterButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: white;
+    background-color: #FFFCFF;
     color: #111827;
   }
 `;
 
 const FooterContent = styled.div`
-  background-color: white;
+  background-color: #FFFCFF;
   padding: 6rem 0;
 `;
 
@@ -123,24 +128,30 @@ const FooterDescription = styled.p`
 
 const FooterBottom = styled.div`
   grid-column: 1 / -1;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 `;
+
 
 const SocialLinks = styled.div`
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 2rem;
-
+  width: 100%;
+  
   a {
-    color: #000;
-    text-decoration: none;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    display: block;
+    max-width: 100px;
+    height: auto;
   }
 `;
+
 
 const BickhamMm = styled.span`
   font-size: 50px;
@@ -154,7 +165,7 @@ const BickhamM = styled.span`
 
 export const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer className = {`${aeonikFont.className}`}>
       <ReadyToWorkSection>
         <MaxWidthWrapper>
           <h1 className="text-7xl font-bold">READY TO WORK</h1>
@@ -230,12 +241,8 @@ the Netherlands, we service clients globally.`}</FooterDescription>
 
           <FooterBottom>
             <SocialLinks>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Clutch
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://vectorlogoseek.com/wp-content/uploads/2019/10/clutch-co-vector-logo.png" width={70} rel="noopener noreferrer" /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://mohammad-mohamed.github.io/hostedImages/images/linkedin.png" width={100} style={{ filter: "grayscale(100%) brightness(50%)" }}  rel="noopener noreferrer"/></a>
             </SocialLinks>
           </FooterBottom>
         </StyledMaxWidthWrapper>

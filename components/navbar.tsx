@@ -12,6 +12,10 @@ const bickhamFont = localfont({
   src: "../public/fonts/Bickham-regular.ttf"
 })
 
+const aeonikFont = localfont({
+  src: "../public/fonts/Aeonik-regular.ttf"
+})
+
 const FlagCircle = styled.span`
   display: inline-block;
   width: 10px;
@@ -83,15 +87,17 @@ export const Navigation = () => {
   const pathname = usePathname();
 
   return (
+  <main className = {`${aeonikFont.className}`}>
+
     <header className={`
       ${pathname === '/login' && 'hidden'}
       sticky inset-x-0 top-0 z-50 bg-black h-16 
-    `}>
+      `}>
       <nav aria-label="Global" className="flex justify-between p-6 lg:px-8 h-full items-center">
         <div className="flex lg:flex-1">
           <div className="-m-1.5 px-11">
             <Link href="/" className="text-2xl font-bold text-white">
-              <BickhamM className = {`${bickhamFont.className}`}>M</BickhamM><span className="font-aeonik">ds</span>
+              <BickhamM className = {`${bickhamFont.className}`}>M</BickhamM><span>ds</span>
             </Link>
           </div>
         </div>
@@ -111,7 +117,7 @@ export const Navigation = () => {
             <button
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               className="flex items-center space-x-3 text-white"
-            >
+              >
               <FlagCircle className={currentLanguage.flag} />
               <span className="text-sm font-light">{currentLanguage.name}</span>
               <ChevronDownIcon className="h-4 w-4 opacity-40" />
@@ -122,12 +128,12 @@ export const Navigation = () => {
               <DropdownMenu>
                 {languages.map((language) => (
                   <DropdownItem
-                    key={language.code}
-                    onClick={() => {
+                  key={language.code}
+                  onClick={() => {
                       setCurrentLanguage(language);
                       setIsLanguageOpen(false);
                     }}
-                  >
+                    >
                     <FlagCircle className={language.flag} />
                     <span>{language.name}</span>
                   </DropdownItem>
@@ -147,7 +153,7 @@ export const Navigation = () => {
             type="button"
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-          >
+            >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="w-6 h-6" />
           </button>
@@ -164,7 +170,7 @@ export const Navigation = () => {
               type="button"
               onClick={() => setMobileMenuOpen(false)}
               className="-m-2.5 rounded-md p-2.5 text-white"
-            >
+              >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="w-6 h-6" />
             </button>
@@ -187,7 +193,7 @@ export const Navigation = () => {
                       key={language.code}
                       onClick={() => setCurrentLanguage(language)}
                       className="flex items-center space-x-3 -mx-3 px-3 py-2 text-base/7 font-light text-white hover:bg-gray-800 w-full"
-                    >
+                      >
                       <FlagCircle className={language.flag} />
                       <span>{language.name}</span>
                     </button>
@@ -202,5 +208,6 @@ export const Navigation = () => {
         </DialogPanel>
       </Dialog>
     </header>
+  </main>
   );
 };
